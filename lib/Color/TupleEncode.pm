@@ -29,16 +29,16 @@ generating color representation of a comparison of multiple values.
 
 =head1 VERSION
 
-Version 0.1
+Version 0.11
 
 =cut
 
-our $VERSION = '0.1';
+our $VERSION = '0.11';
 
 =head1 SYNOPSIS
 
 Given a tuple (e.g. three numbers) , apply color-coding method to
-encode the tuple by a color in HSV (hue, saturation, value) space. For a visual tour of the results, see http://mkweb.bcgsc.ca/tupleencode/ .
+encode the tuple by a color in HSV (hue, saturation, value) space. For a visual tour of the results, see L<http://mkweb.bcgsc.ca/tupleencode/>.
 
   use Color::TupleEncode;
 
@@ -85,7 +85,7 @@ Use C<%options> to define implementation and any parameters that control the enc
   %options = (-method=>"Color::TupleEncode::Baran",
               -saturation=>{min=>0,max=>1,dmin=>0,dmax=>1});
 
-Non-OO interface is also supported
+A non-OO interface is also supported.
 
   # import functions explicitly
   use Color::TupleEncode qw(tuple_asRGB tuple_asRGB255 tuple_asHSV tuple_asRGBhex);
@@ -234,7 +234,7 @@ This script is much more flexible. It can read tuples from a file, or
 generate a matrix of tuples that span a given range. You can specify
 the implementation and options on the command line.
 
-The script can also generate a PNG color chart.
+The script can also generate a PNG color chart of the kind seen at L<http://mkweb.bcgsc.ca/tupleencode/?color_charts>.
 
 By default C<tuple2color> uses the 3-tuple encoding.
 
@@ -295,7 +295,7 @@ A large 2-tuple encoding chart with C<[a,b]> in the range C<[0,2]> sampling ever
 A small 2-tuple encoding chart with C<[a,b]> in the range C<[0,2]> sampling every C<0.3>.
 
   ./tuple2color -method "Color::TupleEncode::2Way"  \
-                -min 0 -max 2   -step 0.3           \
+                -min 0 -max 2 -step 0.3             \
                 -outfile color-chart-2way-small.png \
                 -width 600 -height 430              \
                 -draw

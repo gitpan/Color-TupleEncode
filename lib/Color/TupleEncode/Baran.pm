@@ -10,7 +10,7 @@ use Math::VecStat qw(min max);
 use POSIX qw(fmod);
 use Readonly;
 
-use Smart::Comments;
+#use Smart::Comments;
 
 =head1 NAME
 
@@ -19,11 +19,11 @@ implements color encoding of a 3-tuple C<(x,y,z)> to a color
 
 =head1 VERSION
 
-Version 0.1
+Version 0.11
 
 =cut
 
-our $VERSION = '0.1';
+our $VERSION = '0.11';
 
 =head1 SYNOPSIS
 
